@@ -1,0 +1,30 @@
+﻿@using Demo.DAL.Models
+@model Department
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>Department @Model.Name Details</h1>
+
+ 
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Code"></label>
+        <input readonly class="form-control" asp-for="Code" />
+      
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Name"></label>
+    <input readonly class="form-control" asp-for="Name" />
+      
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="DateOfCreation"></label>
+    <input readonly class="form-control" asp-for="DateOfCreation" />
+    <a asp-action="Edit" asp-route-id="@Model.id" class="btn btn-secondary">Edit</a>
+    <a asp-action="Index" class="btn btn-light">Back to index</a>
+
+    </div>
+ 
